@@ -42,7 +42,7 @@ class ShowStudentList extends Component {
 					<ul>
 						{items.map(item => (
 							<li key= {item.student_id}>
-								Name: {item.student_name} | Email: {item.student_address} | {'rabin'}
+								Name: {item.student_name} | Email: {item.student_address}
 							</li>
 						))}
 					</ul>
