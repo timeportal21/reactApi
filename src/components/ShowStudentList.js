@@ -12,7 +12,7 @@ class ShowStudentList extends Component {
 	}
 	
 	componentDidMount() {
-		axios.get(`http://localhost/restapi/student/getStudent`)
+		axios.get(`https://techrab.tk/student/getStudent`)
 			.then(res => {
 				// console.log(res);
 				this.setState({
