@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios';
-// import {Table} from 'reactstrap';
+import {Table} from 'reactstrap';
 
 // const getAPI = 'http://localhost/restapi/student/getStudent';
 
@@ -39,13 +39,24 @@ class ShowStudentList extends Component {
 		} else {
 			return (
 				<div>
-					<ul>
-						{items.map(item => (
-							<li key= {item.student_id}>
-								Name: {item.student_name} | Email: {item.student_address}
-							</li>
-						))}
-					</ul>
+					<Table>
+						<thead>
+							<tr>
+								<th>S.N</th>
+								<th>Student Name</th>
+								<th>Student Address</th>
+							</tr>
+						</thead>
+						<tbody>
+							{items.map(item => (
+								<tr key= {item.student_id}>
+									<td>{item.student_id}</td>
+									<td>{item.student_name}</td>
+									<td>{item.student_address}</td>
+								</tr>
+							))}
+						</tbody>
+					</Table>
 				</div>
 		    )
 		}
